@@ -1,0 +1,26 @@
+@media (min-width:576px) {
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media (min-width:768px) {
+    .nav__btn {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media (min-width:992px) {
+    .nav_links {
+        display: block;
+    }
+    .header-content__caption{
+        max-width: 57rem;
+    }
+}
+
