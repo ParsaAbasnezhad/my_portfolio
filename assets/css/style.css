@@ -350,13 +350,15 @@ $%$%$%%$%$%$%$%$$%
 
 */
 .main {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .services {
     margin-top: -19rem;
     display: flex;
     flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 .service {
@@ -374,7 +376,7 @@ $%$%$%%$%$%$%$%$$%
     color: var(--dark);
     flex-grow: 1;
     gap: 1rem;
-    margin-right:1rem ;
+    margin-right: 1rem;
     margin-left: 1rem;
 }
 
@@ -391,3 +393,151 @@ $%$%$%%$%$%$%$%$$%
 }
 
 .sernice__caption {}
+
+
+/* 
+
+@#@#@#@#@#@#@#@#@#@#
+
+Destinations
+
+@#@#@#@#@#@#@#@#@@#
+
+
+
+*/
+
+.destinations {
+    text-align: center;
+    padding: 8rem 0;
+    background-color: var(--pink);
+
+}
+
+.destinations__logo {
+    margin: 0 auto;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.destinations__title {
+    font-family: var(--secondery_font);
+    font-size: 3rem;
+    max-width: 36rem;
+    margin: 0 auto;
+    margin: 3rem auto;
+}
+
+.destinations__link {
+    color: var(--orenge);
+    border: 1px solid var(--orenge);
+    background: transparent;
+    transition: all 250ms ease-in;
+}
+
+.destinations__link:hover {
+    color: var(--white);
+    background-color: var(--orenge);
+}
+
+
+
+
+/* 
+
+
+@#@#@#@#@#@#@#@#@#@#
+
+Place
+
+@#@#@#@#@#@@#@#@#@#
+
+
+*/
+
+
+.destinations__place {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.place {
+    background-color: var(--white);
+    border-radius: 2rem;
+    padding: 3rem;
+    color: var(--dark);
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    width: 32rem;
+    flex-grow: 1;
+}
+
+.place__banner {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    height: 18rem;
+}
+
+.place__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+}
+
+.place__like-icon {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.place_price {
+    background-color: var(--white);
+    bottom: 0;
+    position: absolute;
+    width: 10rem;
+    color: var(--orenge);
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+    bottom: -6px;
+}
+
+.place__title {
+    font-family: var(--secondery_font);
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.place__caption {
+    font-family: var(--primary_font_md);
+    text-align: center;
+    width: 25rem;
+    color: vae;
+}
+
+.place_link {
+    color: #8D8D8D;
+    background-color: rgba(141, 141, 141, 10%);
+    margin-top: 2rem;
+}
