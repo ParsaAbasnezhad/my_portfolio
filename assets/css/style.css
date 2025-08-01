@@ -9,11 +9,13 @@
     --primary_font: "Roboto", Arial, Helvetica, sans-serif;
     --primary_font_md: "Roboto Medium", Arial, Helvetica, sans-serif;
     --secondery_font: "Archivo Black", Arial, Helvetica, sans-serif;
+
 }
 
 html {
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -27,11 +29,17 @@ body {
     font-family: var(--primary_font);
     font-size: 1.6rem;
     background-color: var(--pink);
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
 }
+
+.container {
+    position: relative;
+}
+
 
 .header {
     background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(/assets/image/header-bg.jpg);
@@ -412,8 +420,35 @@ Destinations
     text-align: center;
     padding: 8rem 0;
     background-color: var(--pink);
+    position: relative;
 
 }
+
+.destinations::after,
+.destinations::before {
+    content: "";
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    z-index: -1;
+}
+
+.destinations::after {
+    background-image: url(/assets/image/svgs/shape1.svg);
+    top: 153px;
+    right: -21rem;
+}
+
+.destinations::before {
+    background-image: url(/assets/image/svgs/shape2.svg);
+    left: -40rem;
+    top: 31rem;
+}
+
+
 
 .destinations__logo {
     margin: 0 auto;
@@ -536,7 +571,6 @@ Place
 .place__caption {
     font-family: var(--primary_font_md);
     text-align: center;
-    width: 25rem;
     color: vae;
 }
 
@@ -567,10 +601,29 @@ Newsletter
     display: flex;
     flex-direction: column-reverse;
     margin: 6rem 0;
+    position: relative;
 
 }
 
-.newsletter__content {}
+.newsletter::before {
+    content: '';
+    position: absolute;
+    top: 15rem;
+    left: 0rem;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/image/svgs/shape3.svg');
+    background-repeat: no-repeat;
+    width: 50rem;
+    height: 50rem;
+    background-size: contain;
+
+}
+
+.newsletter__content,
+.newsletter__banner {
+    z-index: 2;
+}
 
 .newsletter__title {
     font-family: var(--secondery_font);
@@ -627,6 +680,7 @@ Newsletter
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    box-shadow: 0 0 1rem #d96e54;
 
 }
 
@@ -653,13 +707,31 @@ Footer
     background-color: var(--secondart-color);
     border-top-right-radius: 10rem;
     border-top-left-radius: 10rem;
-    padding: 7rem 0 2rem 0;
+    padding-bottom: 4rem;
+}
+
+.footer>.container {
+    padding-top: 10rem;
 }
 
 .footer__title {
     font-family: var(--secondery_font);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+.footer__scroll {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 2rem;
+    right: 0;
+    top: -2.5rem;
+    box-shadow: 0 0 1.1px var(--dark)
 }
 
 .footer__wrapper {
@@ -697,9 +769,9 @@ Footer
 .footer-pages__item {}
 
 .footer-pages__link {
-    color:var(--dark);
+    color: var(--dark);
 }
 
-.footer-pages__link :hover{
+.footer-pages__link :hover {
     text-decoration: underline;
 }
